@@ -1,3 +1,34 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$floorplan-aspect-ratio: 2.16;
+
+.floorplan-container {
+  width: 100%;
+  padding-bottom: 100% / $floorplan-aspect-ratio;
+  position: relative;
+  background: blue;
+}
+
+.floorplan {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+
+  color: white;
+  font-size: 24px;
+  text-align: center;
+
+  .roomA {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 10%;
+    height: 10%;
+    background-color: #f00;
+  }
+  .roomB {
+    position: absolute;
+    left: 40%;
+    top: 60%;
+    width: 20%;
+    height: 10%;
+    background-color: #f0f;
+  }
+}
