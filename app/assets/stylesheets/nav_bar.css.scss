@@ -1,0 +1,23 @@
+.app-nav-bar {
+  background: #000;
+  color: #ddd;
+  overflow: hidden;
+
+  .user-nav {
+    float: right;
+  }
+
+  section {
+    display: inline-block;
+    padding: 1em 0;
+
+    a {
+      padding: 1em;
+
+      &:hover,
+      &:focus {
+        background: #333;
+      }
+    }
+  }
+}
