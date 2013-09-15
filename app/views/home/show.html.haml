@@ -1,4 +1,9 @@
 .floorplan-container
   .floorplan
-    .roomA
-    .roomB
+    - @rooms.each do |room|
+      .room{ data: { room_id: room.id }, style: room_styles(room) }
+        = room.name
+    - @users.each do |user|
+      .user{ style: user_styles(user) }
+        = user_photo(user)
+        .user-name= user.name

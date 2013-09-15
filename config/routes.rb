@@ -9,5 +9,6 @@ Waldo::Application.routes.draw do
   root 'home#show'
 
   resources :notes
+  resources :users
   resource :home, controller: :home, only: :show
 end

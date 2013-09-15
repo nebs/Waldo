@@ -1,2 +1,16 @@
-%h1 Rooms#index
-%p Find me in app/views/rooms/index.html.haml
+%h1 Rooms
+%table
+  %tr
+    %td Name
+    %td # Checkins
+    %td Current occupants
+    %td Last checkin time
+  - @rooms.each do |room|
+    %tr
+      %td= room.name
+      %td= room.checkins.count
+      %td
+        %ul
+          - room.occupants.each do |user|
+            %li= user.name
+      %td= room.checkins.count > 0 ? room.checkins.last.created_at : 'Never'

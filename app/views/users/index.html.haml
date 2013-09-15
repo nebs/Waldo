@@ -1,0 +1,13 @@
+%h1 Users
+%table
+  %tr
+    %td Name
+    %td # Checkins
+    %td Current room
+    %td Last checkin time
+  - @users.each do |user|
+    %tr
+      %td= user.name
+      %td= user.checkins.count
+      %td= user.checkins.count > 0 && user.checkins.last.room.present? ? user.checkins.last.room.name : 'None'
+      %td= user.checkins.count > 0 ? user.checkins.last.created_at : 'Never'

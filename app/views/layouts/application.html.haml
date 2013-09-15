@@ -18,6 +18,10 @@
   .app-nav-bar
     %section
       = link_to 'Waldo', home_path
+    %section
+      = link_to 'Rooms', rooms_path
+    %section
+      = link_to 'People', users_path
     %section.user-nav
       - if current_user
         Signed in as
