@@ -4,7 +4,7 @@ $floorplan-aspect-ratio: 2.16;
   width: 100%;
   padding-bottom: 100% / $floorplan-aspect-ratio;
   position: relative;
-  background: blue;
+  background: #eee;
 }
 
 .floorplan {
@@ -13,11 +13,10 @@ $floorplan-aspect-ratio: 2.16;
 
   color: white;
   font-size: 1em;
-  text-align: center;
 
   .room {
     position: absolute;
-    background-color: #f00;
+    background-color: #aaa;
   }
   .user {
     position: absolute;
@@ -32,10 +31,14 @@ $floorplan-aspect-ratio: 2.16;
       position: relative;
     }
     .user-name {
-      background-color: #000;
-      color: #fff;
+      font-weight: bold;
+      color: #222;
       position: relative;
       min-width: 50px;
+    }
+    .checkin-time {
+      color: #444;
+      min-width: 100px;
     }
   }
 }

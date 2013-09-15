@@ -4,10 +4,10 @@
     %td Name
     %td # Checkins
     %td Current room
-    %td Last checkin time
+    %td Last checkin
   - @users.each do |user|
     %tr
       %td= user.name
       %td= user.checkins.count
       %td= user.checkins.count > 0 && user.checkins.last.room.present? ? user.checkins.last.room.name : 'None'
-      %td= user.checkins.count > 0 ? user.checkins.last.created_at : 'Never'
+      %td= user.checkins.count > 0 ? time_ago_in_words(user.checkins.last.created_at) + ' ago ' : 'Never'

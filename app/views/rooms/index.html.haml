@@ -13,4 +13,4 @@
         %ul
           - room.occupants.each do |user|
             %li= user.name
-      %td= room.checkins.count > 0 ? room.checkins.last.created_at : 'Never'
+      %td= room.checkins.count > 0 ? time_ago_in_words(room.checkins.last.created_at) + ' ago ' : 'Never'

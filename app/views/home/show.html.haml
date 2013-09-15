@@ -6,4 +6,8 @@
     - @users.each do |user|
       .user{ style: user_styles(user) }
         = user_photo(user)
-        .user-name= user.name
+        .user-name
+          = short_user_name(user)
+        .checkin-time
+          = time_ago_in_words(user.checkins.last.created_at)
+          ago
