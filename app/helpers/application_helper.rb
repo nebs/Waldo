@@ -7,7 +7,7 @@ module ApplicationHelper
     words = user.name.split(' ')
     result = words.first
     if words.length > 1
-      result += " #{words[1].capitalize.first}"
+      result += " #{words[1].capitalize.first}."
     end
   end
 end
