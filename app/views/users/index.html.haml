@@ -1,4 +1,4 @@
-%h1 Users
+%h3 Users
 %table
   %tr
     %td Name
@@ -9,5 +9,7 @@
     %tr
       %td= user.name
       %td= user.checkins.count
-      %td= user.checkins.count > 0 && user.checkins.last.room.present? ? user.checkins.last.room.name : 'None'
+      %td
+        - room = user.current_room
+        = room ? room.name : 'None'
       %td= user.checkins.count > 0 ? time_ago_in_words(user.checkins.last.created_at) + ' ago ' : 'Never'

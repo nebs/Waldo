@@ -1,6 +1,8 @@
 .app-nav-bar {
-  background: #000;
-  color: #ddd;
+  background: #fff;
+  border-bottom: 1px solid #666;
+  color: #666;
+  font-size: .6em;
   overflow: hidden;
 
   .user-nav {
@@ -12,11 +14,13 @@
     padding: 1em 0;
 
     a {
+      color: #666;
       padding: 1em;
 
       &:hover,
       &:focus {
-        background: #333;
+        color: #ddd;
+        background: #666;
       }
     }
   }
