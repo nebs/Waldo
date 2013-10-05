@@ -1,4 +1,8 @@
 module HomeHelper
+  def floorplan_styles(floorplan)
+    "padding-bottom: #{100 / floorplan.aspect_ratio}%;"
+  end
+
   def room_styles(room)
     styles = ''
     styles += "left: #{(room.x * 100).to_i}%;"
