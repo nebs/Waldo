@@ -14,10 +14,11 @@
   = javascript_include_tag "vendor/custom.modernizr"
   = csrf_meta_tags
 
-%body
+%body{ class: ('logged-out' unless current_user) }
   - if current_user
     = render 'shared/nav_bar'
-    = yield
+    .main-content
+      = yield
   - else
     = render 'shared/welcome'
   = javascript_include_tag "application"

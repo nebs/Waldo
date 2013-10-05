@@ -1,2 +1,8 @@
-Welcome to Waldo
-= link_to 'Sign in with Facebook', '/auth/facebook', id: 'sign_in'
+.welcome
+  .welcome-image
+    = image_tag 'waldo.png'
+  .welcome-login
+    = link_to 'Login with Facebook',
+              '/auth/facebook',
+              id: 'sign_in',
+              class: 'button'
