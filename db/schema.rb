@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131005164711) do
+ActiveRecord::Schema.define(version: 20131005183801) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "areas", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.float    "aspect_ratio"
+  end
 
   create_table "checkins", force: true do |t|
     t.integer  "user_id"
@@ -25,13 +32,6 @@ ActiveRecord::Schema.define(version: 20131005164711) do
     t.float    "y"
   end
 
-  create_table "floorplans", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "name"
-    t.float    "aspect_ratio"
-  end
-
   create_table "rooms", force: true do |t|
     t.string   "name"
     t.float    "x"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20131005164711) do
     t.datetime "updated_at"
     t.float    "width"
     t.float    "height"
-    t.integer  "floorplan_id"
+    t.integer  "area_id"
   end
 
   create_table "users", force: true do |t|

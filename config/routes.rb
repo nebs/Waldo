@@ -8,6 +8,6 @@ Waldo::Application.routes.draw do
   resources :users
   resources :checkins
   resources :rooms
-  resources :floorplans
+  resources :areas
   resource :home, controller: :home, only: :show
 end

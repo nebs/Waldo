@@ -1,6 +1,6 @@
 class Room < ActiveRecord::Base
   has_many :checkins, dependent: :destroy
-  belongs_to :floorplan
+  belongs_to :area
 
   def occupants
     users = User.all

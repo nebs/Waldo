@@ -1,10 +1,10 @@
 - if current_user
-  - @floorplans.each do |floorplan|
-    %section.floorplan-section
-      %header= floorplan.name
-      .floorplan-container{ style: floorplan_styles(floorplan) }
-        .floorplan
-          - floorplan.rooms.each do |room|
+  - @areas.each do |area|
+    %section.area-section
+      %header= area.name
+      .area-container{ style: area_styles(area) }
+        .area
+          - area.rooms.each do |room|
             .room{ data: { room_id: room.id }, style: room_styles(room) }
               .room-info
                 = room.name

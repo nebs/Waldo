@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def show
-    @floorplans = Floorplan.all
+    @areas = Area.all
     @users = User.all.select(&:active?)
   end
 end
