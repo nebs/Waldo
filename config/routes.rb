@@ -5,9 +5,10 @@ Waldo::Application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
-  resources :users
-  resources :checkins
-  resources :zones
-  resources :areas
   resource :home, controller: :home, only: :show
+  resources :users, only: [:index, :show]
+  resources :checkins, only: :create
+  resources :areas, only: [:index, :show] do
+    resources :zones, only: [:index, :show]
+  end
 end

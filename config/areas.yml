@@ -38,7 +38,7 @@
     - { name: 'Skopistan',        x: 0.92, y: 0.59, w: 0.08, h: 0.41 }
     - { name: 'Work Area A',      x: 0.71, y: 0.17, w: 0.21, h: 0.64 }
     - { name: 'Work Area B',      x: 0.56, y: 0.81, w: 0.36, h: 0.19 }
-- name: 'Other Areas'
+- name: 'Outside'
   aspect_ratio: 4
   zones:
     - { name: 'Coffee Shop',      x: 0,    y: 0,    w: 0.25, h: 1 }

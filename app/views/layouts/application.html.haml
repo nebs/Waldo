@@ -15,18 +15,9 @@
   = csrf_meta_tags
 
 %body
-  .app-nav-bar
-    %section
-      = link_to 'Map', home_path
-    %section
-      = link_to 'Zones', zones_path
-    %section
-      = link_to 'People', users_path
-    %section.user-nav
-      - if current_user
-        %strong= current_user.name
-        = link_to 'Sign out', signout_path, id: 'sign_out'
-      - else
-        = link_to 'Sign in with Facebook', '/auth/facebook', id: 'sign_in'
-  = yield
+  - if current_user
+    = render 'shared/nav_bar'
+    = yield
+  - else
+    = render 'shared/welcome'
   = javascript_include_tag "application"

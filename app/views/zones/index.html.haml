@@ -1,13 +1,13 @@
-%h3 Zones
+%h3 #{@area.name} > Zones
 %table
   %tr
     %td Name
     %td # Checkins
     %td Current occupants
     %td Last checkin time
-  - @zones.each do |zone|
+  - @area.zones.each do |zone|
     %tr
-      %td= zone.name
+      %td= link_to zone.name, area_zone_path(@area, zone)
       %td= zone.checkins.count
       %td
         - if zone.occupants.length == 0

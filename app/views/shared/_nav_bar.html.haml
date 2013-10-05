@@ -1,0 +1,10 @@
+.app-nav-bar
+  %section
+    = link_to 'Waldo', home_path
+  %section
+    = link_to 'Areas', areas_path
+  %section
+    = link_to 'People', users_path
+  %section.user-nav
+    %strong= current_user.name
+    = link_to 'Sign out', signout_path, id: 'sign_out'

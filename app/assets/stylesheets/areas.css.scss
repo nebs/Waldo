@@ -1,3 +1,69 @@
-// Place all the styles related to the Floorplans controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.area-map-container {
+  width: 100%;
+  position: relative;
+  background-color: #eee;
+  border: 1px solid #333;
+  margin-bottom: 1em;
+}
+
+.area-map {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  color: #fff;
+  font-size: .5em;
+
+  .area-map-zone {
+    position: absolute;
+    background-color: #aaa;
+    border: 1px solid #000;
+    cursor: crosshair;
+
+    .area-map-zone-info {
+      background-color: #000;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #666;
+
+      .area-map-zone-info {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+
+  .area-map-user {
+    $offset-user-translate: translate(-50%, -50%);
+    -webkit-transform: $offset-user-translate;
+    -moz-transform: $offset-user-translate;
+    -ms-transform: $offset-user-translate;
+    -o-transform: $offset-user-translate;
+    transform: $offset-user-translate;
+
+    pointer-events: none;
+    position: absolute;
+    height: 3em;
+    width: 3em;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .area-map-user-name {
+      background-color: #8DDB07;
+      color: #333;
+      position: relative;
+      min-width: 50px;
+    }
+
+    .area-map-user-checkin-time {
+      color: #444;
+      min-width: 100px;
+    }
+  }
+}

@@ -1,21 +1,5 @@
 - if current_user
-  - @areas.each do |area|
-    %section.area-section
-      %header= area.name
-      .area-container{ style: area_styles(area) }
-        .area
-          - area.zones.each do |zone|
-            .zone{ data: { zone_id: zone.id }, style: zone_styles(zone) }
-              .zone-info
-                = zone.name
-              - zone.occupants.each do |user|
-                .user{ style: user_styles(user) }
-                  = user_photo(user)
-                  .user-name
-                    = short_user_name(user)
-                  .checkin-time
-                    = time_ago_in_words(user.checkins.last.created_at)
-                    ago
+  HOME!
 - else
   .instructions
     You must log in to view this page.

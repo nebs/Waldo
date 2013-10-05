@@ -1,0 +1,14 @@
+.area-map-container{ style: area_styles(area) }
+  .area-map
+    - area.zones.each do |zone|
+      .area-map-zone{ data: { zone_id: zone.id }, style: zone_styles(zone) }
+        .area-map-zone-info
+          = zone.name
+        - zone.occupants.each do |user|
+          .area-map-user{ style: user_styles(user) }
+            = user_photo(user)
+            .area-map-user-name
+              = short_user_name(user)
+            .area-map-user-checkin-time
+              = time_ago_in_words(user.checkins.last.created_at)
+              ago

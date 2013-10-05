@@ -7,7 +7,7 @@
     %td Last checkin
   - @users.each do |user|
     %tr
-      %td= user.name
+      %td= link_to user.name, user_path(user)
       %td= user.checkins.count
       %td
         - zone = user.current_zone

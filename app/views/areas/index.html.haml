@@ -1,2 +1,5 @@
-%p
-  TBD...
+%h3 Areas
+- @areas.each do |area|
+  %section.area-section
+    %header= link_to area.name, area_path(area)
+    = render 'areas/map', area: area
