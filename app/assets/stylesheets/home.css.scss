@@ -49,6 +49,13 @@ body {
   }
 
   .user {
+    $offset-user-translate: translate(-50%, -50%);
+    -webkit-transform: $offset-user-translate;
+    -moz-transform: $offset-user-translate;
+    -ms-transform: $offset-user-translate;
+    -o-transform: $offset-user-translate;
+    transform: $offset-user-translate;
+
     pointer-events: none;
     position: absolute;
     font-size: .5em;
