@@ -1,5 +1,5 @@
 namespace :area do
-  desc 'Generate all the areas and rooms'
+  desc 'Generate all the areas and zones'
   task :generate_all => :environment do
     puts "Deleting #{Area.count} areas..."
     Area.delete_all
@@ -13,16 +13,16 @@ namespace :area do
         aspect_ratio: area['aspect_ratio']
       )
 
-      rooms = area['rooms']
-      puts "- - Generating #{rooms.length} rooms..."
-      rooms.each do |room|
-        puts '- - - ' + room['name']
-        room_model = Room.create!(
-          name: room['name'],
-          x: room['x'],
-          y: room['y'],
-          width: room['w'],
-          height: room['h'],
+      zones = area['zones']
+      puts "- - Generating #{zones.length} zones..."
+      zones.each do |zone|
+        puts '- - - ' + zone['name']
+        zone_model = Zone.create!(
+          name: zone['name'],
+          x: zone['x'],
+          y: zone['y'],
+          width: zone['w'],
+          height: zone['h'],
           area_id: area_model.id
         )
       end

@@ -3,12 +3,12 @@ module HomeHelper
     "padding-bottom: #{100 / area.aspect_ratio}%;"
   end
 
-  def room_styles(room)
+  def zone_styles(zone)
     styles = ''
-    styles += "left: #{(room.x * 100).to_i}%;"
-    styles += "top: #{(room.y * 100).to_i}%;"
-    styles += "width: #{(room.width * 100).to_i}%;"
-    styles += "height: #{(room.height * 100).to_i}%;"
+    styles += "left: #{(zone.x * 100).to_i}%;"
+    styles += "top: #{(zone.y * 100).to_i}%;"
+    styles += "width: #{(zone.width * 100).to_i}%;"
+    styles += "height: #{(zone.height * 100).to_i}%;"
     styles
   end
 

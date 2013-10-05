@@ -7,7 +7,7 @@ Waldo::Application.routes.draw do
 
   resources :users
   resources :checkins
-  resources :rooms
+  resources :zones
   resources :areas
   resource :home, controller: :home, only: :show
 end

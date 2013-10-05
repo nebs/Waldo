@@ -3,13 +3,13 @@
   %tr
     %td Name
     %td # Checkins
-    %td Current room
+    %td Current zone
     %td Last checkin
   - @users.each do |user|
     %tr
       %td= user.name
       %td= user.checkins.count
       %td
-        - room = user.current_room
-        = room ? room.name : 'None'
+        - zone = user.current_zone
+        = zone ? zone.name : 'None'
       %td= user.checkins.count > 0 ? time_ago_in_words(user.checkins.last.created_at) + ' ago ' : 'Never'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131005183801) do
+ActiveRecord::Schema.define(version: 20131005185155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,22 +25,11 @@ ActiveRecord::Schema.define(version: 20131005183801) do
 
   create_table "checkins", force: true do |t|
     t.integer  "user_id"
-    t.integer  "room_id"
+    t.integer  "zone_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "x"
     t.float    "y"
-  end
-
-  create_table "rooms", force: true do |t|
-    t.string   "name"
-    t.float    "x"
-    t.float    "y"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.float    "width"
-    t.float    "height"
-    t.integer  "area_id"
   end
 
   create_table "users", force: true do |t|
@@ -51,6 +40,17 @@ ActiveRecord::Schema.define(version: 20131005183801) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "zones", force: true do |t|
+    t.string   "name"
+    t.float    "x"
+    t.float    "y"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.float    "width"
+    t.float    "height"
+    t.integer  "area_id"
   end
 
 end

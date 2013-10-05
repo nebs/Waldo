@@ -32,13 +32,13 @@ body {
   color: #fff;
   font-size: .5em;
 
-  .room {
+  .zone {
     position: absolute;
     background-color: #aaa;
     border: 1px solid #000;
     cursor: crosshair;
 
-    .room-info {
+    .zone-info {
       background-color: #000;
     }
 
@@ -47,7 +47,7 @@ body {
       background-color: #fff;
       border: 1px solid #666;
 
-      .room-info {
+      .zone-info {
         background-color: #fff;
         color: #000;
       }

@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
     checkins.count > 0 && checkins.last.created_at > 1.days.ago
   end
 
-  def current_room
-    (active? && checkins.last.room.present?) ? checkins.last.room : nil
+  def current_zone
+    (active? && checkins.last.zone.present?) ? checkins.last.zone : nil
   end
 
   def self.from_omniauth(auth)

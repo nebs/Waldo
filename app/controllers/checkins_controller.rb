@@ -8,9 +8,9 @@ class CheckinsController < ApplicationController
   def create
     x = params[:x]
     y = params[:y]
-    room_id = params[:room_id]
+    zone_id = params[:zone_id]
 
-    Checkin.create!(x: x, y: y, room_id: room_id, user: current_user)
+    Checkin.create!(x: x, y: y, zone_id: zone_id, user: current_user)
   end
 
   def new

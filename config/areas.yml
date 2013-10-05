@@ -1,6 +1,6 @@
 - name: 'Causes Office'
   aspect_ratio: 2.16
-  rooms:
+  zones:
     - { name: 'Ping Pong',        x: 0,    y: 0,    w: 0.09, h: 0.44 }
     - { name: 'Entrance',         x: 0.09, y: 0,    w: 0.17, h: 0.25 }
     - { name: 'Reception',        x: 0.26, y: 0,    w: 0.14, h: 0.19 }
@@ -40,7 +40,7 @@
     - { name: 'Work Area B',      x: 0.56, y: 0.81, w: 0.36, h: 0.19 }
 - name: 'Other Areas'
   aspect_ratio: 4
-  rooms:
+  zones:
     - { name: 'Coffee Shop',      x: 0,    y: 0,    w: 0.25, h: 1 }
     - { name: 'Home',             x: 0.25, y: 0,    w: 0.25, h: 1 }
     - { name: 'Out to Lunch',     x: 0.5,  y: 0,    w: 0.25, h: 1 }
