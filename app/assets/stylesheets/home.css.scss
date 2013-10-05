@@ -49,6 +49,7 @@ body {
   }
 
   .user {
+    pointer-events: none;
     position: absolute;
     font-size: .5em;
     height: 6%;
