@@ -1,3 +1,31 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-photo {
+  width: 3em;
+  height: 3em;
+}
+
+.user-name {
+  font-size: 2em;
+  padding-left: .5em;
+  vertical-align: middle;
+}
+
+.user-photo,
+.user-name {
+  display: table-cell;
+}
+
+.user-info {
+  display: table;
+}
+
+.user-stats {
+  margin-left: 4em;
+}
+
+.user-stat {
+  margin-bottom: .5em;
+}
+
+.user-checkins {
+  margin-top: 1em;
+}

@@ -1,10 +1,17 @@
-.app-nav-bar
-  %section
-    = link_to 'Waldo', home_path
-  %section
-    = link_to 'Areas', areas_path
-  %section
-    = link_to 'People', users_path
-  %section.user-nav
-    %strong= current_user.name
-    = link_to 'Sign out', signout_path, id: 'sign_out'
+%nav.top-bar
+  %ul.title-area
+    %li
+      = link_to image_tag('waldo_body.png'), home_path
+    %li.toggle-topbar.menu-icon
+      = link_to 'Menu', '#'
+  %section.top-bar-section
+    %ul.left
+      %li
+        = link_to 'Areas', areas_path
+      %li
+        = link_to 'Users', users_path
+    %ul.right
+      %li
+        = link_to current_user.name, user_path(current_user)
+      %li
+        = link_to 'Sign out', signout_path, id: 'sign_out'

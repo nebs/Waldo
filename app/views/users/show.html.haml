@@ -1,1 +1,30 @@
-%h3 #{@user.name}
+= render 'shared/breadcrumbs',
+         breadcrumbs: { 'Users' => users_path,
+                        @user.name => nil }
+.user
+  .user-info
+    .user-photo
+      = user_photo(@user)
+    .user-name
+      = @user.name
+
+  .user-stats
+    - zone = @user.current_zone
+    - if zone
+      .user-stat
+        Currently in
+        = link_to zone.name, area_zone_path(zone.area, zone)
+  .user-checkins
+    = pluralize(@user.checkins.count, 'Checkin') + ':'
+    %table
+      %thead
+        %tr.caption
+          %td= Area
+          %td= Zone
+          %td= Time
+      %tbody
+        - @user.checkins.each do |checkin|
+          %tr
+            %td= link_to checkin.zone.area.name, area_path(checkin.zone.area)
+            %td= link_to checkin.zone.name, area_zone_path(checkin.zone.area, checkin.zone)
+            %td= time_ago_in_words(checkin.created_at) + ' ago'

@@ -1,5 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,700);
+
 body {
-  background: #fff;
+  background: #f9f9f9;
+}
+
+table {
+  width: 100%;
 }
 
 body.logged-out {
@@ -9,6 +15,13 @@ body.logged-out {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
 }
 
 .main-content {
@@ -24,6 +37,10 @@ body.logged-out {
     -webkit-animation: spin 4s linear infinite;
     -moz-animation: spin 4s linear infinite;
     animation: spin 4s linear infinite;
+  }
+
+  .welcome-login a {
+    width: 100%;
   }
 }
 
@@ -41,47 +58,6 @@ body.logged-out {
 
 @keyframes spin {
   100% {
-    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-}
-
-.button {
-  -moz-box-shadow:inset 0px 1px 0px 0px #476e9e;
-  -webkit-box-shadow:inset 0px 1px 0px 0px #476e9e;
-  box-shadow:inset 0px 1px 0px 0px #476e9e;
-
-  -moz-box-shadow: 1px 1px 5px 1px #000;
-  -webkit-box-shadow: 1px 1px 5px 1px #000;
-  box-shadow: 1px 1px 5px 1px #000;
-
-  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0076d1), color-stop(1, #0f40a3) );
-  background:-moz-linear-gradient( center top, #0076d1 5%, #0f40a3 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0076d1', endColorstr='#0f40a3');
-  background-color:#0076d1;
-  -webkit-border-top-left-radius:7px;
-  -moz-border-radius-topleft:7px;
-  border-top-left-radius:7px;
-  -webkit-border-top-right-radius:7px;
-  -moz-border-radius-topright:7px;
-  border-top-right-radius:7px;
-  -webkit-border-bottom-right-radius:7px;
-  -moz-border-radius-bottomright:7px;
-  border-bottom-right-radius:7px;
-  -webkit-border-bottom-left-radius:7px;
-  -moz-border-radius-bottomleft:7px;
-  border-bottom-left-radius:7px;
-  border:1px solid #0c5799;
-  width: 100%;
-}
-
-.button:hover {
-  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0f40a3), color-stop(1, #0076d1) );
-  background:-moz-linear-gradient( center top, #0f40a3 5%, #0076d1 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f40a3', endColorstr='#0076d1');
-  background-color:#0f40a3;
-}
-
-.button:active {
-  position:relative;
-  top:1px;
 }

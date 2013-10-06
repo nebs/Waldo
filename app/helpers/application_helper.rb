@@ -1,6 +1,7 @@
 module ApplicationHelper
   def user_photo(user)
-    image_tag "http://graph.facebook.com/#{user.uid}/picture?type=small"
+    image_tag "http://graph.facebook.com/#{user.uid}/picture?type=small",
+              class: 'photo'
   end
 
   def short_user_name(user)

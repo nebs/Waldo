@@ -1,0 +1,6 @@
+%ul.breadcrumbs
+  - breadcrumbs.each do |name, url|
+    - if url
+      %li= link_to name, url
+    - else
+      %li.current= name

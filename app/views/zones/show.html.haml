@@ -1,1 +1,17 @@
-%h3 #{@zone.area.name} > Zones > #{@zone.name}
+= render 'shared/breadcrumbs',
+         breadcrumbs: { 'Areas' => areas_path,
+                        @zone.area.name => area_path(@zone.area),
+                        'Zones' => area_zones_path(@zone.area),
+                        @zone.name => nil }
+
+= pluralize(@zone.checkins.count, 'Checkin') + ':'
+%table
+  %thead
+    %tr.caption
+      %td= User
+      %td= Time
+  %tbody
+    - @zone.checkins.each do |checkin|
+      %tr
+        %td= link_to checkin.user.name, user_path(checkin.user)
+        %td= time_ago_in_words(checkin.created_at) + ' ago'

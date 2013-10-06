@@ -1,15 +1,23 @@
-%h3 People
+= render 'shared/breadcrumbs',
+         breadcrumbs: { 'Users' => nil }
 %table
-  %tr
-    %td Name
-    %td # Checkins
-    %td Current zone
-    %td Last checkin
-  - @users.each do |user|
-    %tr
-      %td= link_to user.name, user_path(user)
-      %td= user.checkins.count
+  %thead
+    %tr.caption
       %td
-        - zone = user.current_zone
-        = zone ? zone.name : 'None'
-      %td= user.checkins.count > 0 ? time_ago_in_words(user.checkins.last.created_at) + ' ago ' : 'Never'
+      %td Name
+      %td # Checkins
+      %td Current zone
+      %td Last checkin
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td.user-photo= user_photo(user)
+        %td= link_to user.name, user_path(user)
+        %td= user.checkins.count
+        %td
+          - zone = user.current_zone
+          - if zone
+            = link_to zone.name, area_zone_path(zone.area, zone)
+          - else
+            None
+        %td= user.checkins.count > 0 ? time_ago_in_words(user.checkins.last.created_at) + ' ago ' : 'Never'

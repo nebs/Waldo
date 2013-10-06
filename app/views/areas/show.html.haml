@@ -1,2 +1,3 @@
-%h3 #{@area.name}
-= link_to 'Zones', area_zones_path(@area)
+= render 'shared/breadcrumbs',
+         breadcrumbs: { 'Areas' => areas_path, @area.name => nil }
+= link_to "View #{pluralize(@area.zones.count, 'Zone')}", area_zones_path(@area)

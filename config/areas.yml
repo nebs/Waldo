@@ -4,9 +4,9 @@
     - { name: 'Ping Pong',        x: 0,    y: 0,    w: 0.09, h: 0.44 }
     - { name: 'Entrance',         x: 0.09, y: 0,    w: 0.17, h: 0.25 }
     - { name: 'Reception',        x: 0.26, y: 0,    w: 0.14, h: 0.19 }
-    - { name: "Men's Room",       x: 0.4,  y: 0,    w: 0.12, h: 0.17 }
-    - { name: "Women's Room",     x: .52,  y: 0,    w: 0.12, h: 0.17 }
-    - { name: 'Shower',           x: 0.64, y: 0,    w: 0.03, h: 0.17 }
+    - { name: "Men's Room",       x: 0.4,  y: 0,    w: 0.11, h: 0.17 }
+    - { name: "Women's Room",     x: 0.51, y: 0,    w: 0.11, h: 0.17 }
+    - { name: 'Shower',           x: 0.62, y: 0,    w: 0.05, h: 0.17 }
     - { name: 'Mini Kitchen',     x: 0.67, y: 0,    w: 0.04, h: 0.17 }
     - { name: 'Janitor Closet',   x: 0.71, y: 0,    w: 0.05, h: 0.17 }
     - { name: 'Goodall',          x: 0.76, y: 0,    w: 0.05, h: 0.17 }
@@ -16,7 +16,7 @@
     - { name: 'Bar',              x: 0,    y: 0.62, w: 0.06, h: 0.25 }
     - { name: 'Lounge',           x: 0,    y: 0.87, w: 0.26, h: 0.13 }
     - { name: 'Dining Area',      x: 0.06, y: 0.44, w: 0.2,  h: 0.43 }
-    - { name: 'The Last Supper',  x: 0.28, y: 0.81, w: 0.22, h: 0.19 }
+    - { name: 'The Last Supper',  x: 0.26, y: 0.81, w: 0.24, h: 0.19 }
     - { name: 'Freight Elevator', x: 0.5,  y: 0.83, w: 0.06, h: 0.17 }
     - { name: 'Lobby',            x: 0.09, y: 0.25, w: 0.17, h: 0.19 }
     - { name: 'Mother Jones',     x: 0.28, y: 0.28, w: 0.07, h: 0.13 }

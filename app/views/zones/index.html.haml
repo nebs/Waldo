@@ -1,19 +1,24 @@
-%h3 #{@area.name} > Zones
+= render 'shared/breadcrumbs',
+         breadcrumbs: { 'Areas' => areas_path,
+                         @area.name => area_path(@area),
+                         'Zones' => nil  }
 %table
-  %tr
-    %td Name
-    %td # Checkins
-    %td Current occupants
-    %td Last checkin time
-  - @area.zones.each do |zone|
+  %thead
     %tr
-      %td= link_to zone.name, area_zone_path(@area, zone)
-      %td= zone.checkins.count
-      %td
-        - if zone.occupants.length == 0
-          None
-        - else
-          %ul
-            - zone.occupants.each do |user|
-              %li= user.name
-      %td= zone.checkins.count > 0 ? time_ago_in_words(zone.checkins.last.created_at) + ' ago ' : 'Never'
+      %td Name
+      %td # Checkins
+      %td Current occupants
+      %td Last checkin time
+  %tbody
+    - @area.zones.each do |zone|
+      %tr
+        %td= link_to zone.name, area_zone_path(@area, zone)
+        %td= zone.checkins.count
+        %td
+          - if zone.occupants.length == 0
+            None
+          - else
+            %ul
+              - zone.occupants.each do |user|
+                %li= user.name
+        %td= zone.checkins.count > 0 ? time_ago_in_words(zone.checkins.last.created_at) + ' ago' : 'Never'

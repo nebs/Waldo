@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(document).on('click', '.area-map-zone', function(e) {
+  $('.area-map-zone').click(function(e){
     $.post('/checkins', {
       x: (e.pageX - $(this).offset().left) / $(this).width(),
       y: (e.pageY - $(this).offset().top) / $(this).height(),
@@ -8,5 +8,7 @@ $(document).ready(function() {
       window.location.href = window.location.href;
     });
     return false;
+  });
+  $(document).on('click', '.area-map-zone', function(e) {
   });
 });

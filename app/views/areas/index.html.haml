@@ -1,4 +1,5 @@
-%h3 Areas
+= render 'shared/breadcrumbs',
+         breadcrumbs: { 'Areas' => nil }
 .areas
   - @areas.each do |area|
     %section.area-section
