@@ -1,3 +1,4 @@
 = render 'shared/breadcrumbs',
          breadcrumbs: { 'Areas' => areas_path, @area.name => nil }
-= link_to "View #{pluralize(@area.zones.count, 'Zone')}", area_zones_path(@area)
+= link_to pluralize(@area.zones.count, 'Zone'), area_zones_path(@area)
+= render 'shared/zone_list', area: @area

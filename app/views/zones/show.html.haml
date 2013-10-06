@@ -16,3 +16,5 @@
         %tr
           %td= link_to checkin.user.name, user_path(checkin.user)
           %td= time_ago_in_words(checkin.created_at) + ' ago'
+- else
+  No checkins

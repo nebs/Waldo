@@ -17,6 +17,10 @@
   }
 }
 
+.zone-list {
+  margin-top: .5em;
+}
+
 .area-map {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
@@ -38,10 +42,18 @@
     cursor: pointer;
 
     .area-map-zone-info {
-      background-color: #222;
-      padding: .3em;
-      font-size: 1.2em;
+      color: #333;
+      background-color: none;
+      padding: 0;
+      font-size: .7em;
       font-family: 'courier new';
+
+      @media (min-width: 640px) {
+        color: #fff;
+        background-color: #222;
+        padding: .3em;
+        font-size: 1.2em;
+      }
     }
 
     &:focus,
