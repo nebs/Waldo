@@ -12,19 +12,20 @@
     - zone = @user.current_zone
     - if zone
       .user-stat
-        Currently in
-        = link_to zone.name, area_zone_path(zone.area, zone)
-  .user-checkins
-    = pluralize(@user.checkins.count, 'Checkin') + ':'
-    %table
-      %thead
-        %tr.caption
-          %td= Area
-          %td= Zone
-          %td= Time
-      %tbody
-        - @user.checkins.each do |checkin|
-          %tr
-            %td= link_to checkin.zone.area.name, area_path(checkin.zone.area)
-            %td= link_to checkin.zone.name, area_zone_path(checkin.zone.area, checkin.zone)
-            %td= time_ago_in_words(checkin.created_at) + ' ago'
+        Currently at
+        = link_to zone.name.downcase, area_zone_path(zone.area, zone)
+  - if @checkins.count > 0
+    .user-checkins
+      = pluralize(@checkins.count, 'Checkin') + ':'
+      %table.user-checkins-list
+        %thead
+          %tr.caption
+            %td= Area
+            %td= Zone
+            %td= Time
+        %tbody
+          - @checkins.each do |checkin|
+            %tr
+              %td= link_to checkin.zone.area.name, area_path(checkin.zone.area)
+              %td= link_to checkin.zone.name, area_zone_path(checkin.zone.area, checkin.zone)
+              %td= time_ago_in_words(checkin.created_at) + ' ago'

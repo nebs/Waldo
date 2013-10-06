@@ -7,5 +7,6 @@ class ZonesController < ApplicationController
 
   def show
     @zone = Zone.find_by_id(params[:id])
+    @checkins = @zone.checkins.order('created_at DESC')
   end
 end

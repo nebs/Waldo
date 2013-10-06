@@ -4,14 +4,15 @@
                         'Zones' => area_zones_path(@zone.area),
                         @zone.name => nil }
 
-= pluralize(@zone.checkins.count, 'Checkin') + ':'
-%table
-  %thead
-    %tr.caption
-      %td= User
-      %td= Time
-  %tbody
-    - @zone.checkins.each do |checkin|
-      %tr
-        %td= link_to checkin.user.name, user_path(checkin.user)
-        %td= time_ago_in_words(checkin.created_at) + ' ago'
+- if @checkins.count > 0
+  = pluralize(@checkins.count, 'Checkin') + ':'
+  %table.zone-checkins-list
+    %thead
+      %tr.caption
+        %td= User
+        %td= Time
+    %tbody
+      - @checkins.each do |checkin|
+        %tr
+          %td= link_to checkin.user.name, user_path(checkin.user)
+          %td= time_ago_in_words(checkin.created_at) + ' ago'
