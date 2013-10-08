@@ -14,7 +14,8 @@
   = javascript_include_tag "vendor/custom.modernizr"
   = csrf_meta_tags
 
-%body{ class: ('logged-out' unless current_user) }
+%body{ class: ('logged-out' unless current_user),
+       data: { no_turbolink: true } }
   - if current_user
     = render 'shared/nav_bar'
     .main-content
