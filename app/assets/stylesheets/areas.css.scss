@@ -28,10 +28,10 @@
   font-size: .5em;
 
   .area-map-zone {
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-     transition: all 0.3s ease-out;
+    -webkit-transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+    -moz-transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+    -o-transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+    transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out;
 
     -webkit-box-shadow: 1px 1px 4px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:    1px 1px 4px rgba(50, 50, 50, 0.75);
@@ -42,6 +42,11 @@
     cursor: pointer;
 
     .area-map-zone-info {
+      -webkit-transition: background-color 0.15s ease-out, color 0.15s ease-out;
+      -moz-transition: background-color 0.15s ease-out, color 0.15s ease-out;
+      -o-transition: background-color 0.15s ease-out, color 0.15s ease-out;
+      transition: background-color 0.15s ease-out, color 0.15s ease-out;
+
       color: #333;
       background-color: none;
       padding: 0;
@@ -56,7 +61,6 @@
       }
     }
 
-    &:focus,
     &:hover {
       background-color: #fff;
       -webkit-box-shadow: 1px 1px 9px rgba(50, 50, 50, 1);
@@ -76,6 +80,11 @@
   }
 
   .area-map-user {
+    -webkit-transition: opacity 0.15s ease-out;
+    -moz-transition: opacity 0.15s ease-out;
+    -o-transition: opacity 0.15s ease-out;
+     transition: opacity 0.15s ease-out;
+
     $offset-user-translate: translate(-50%, -50%);
     -webkit-transform: $offset-user-translate;
     -moz-transform: $offset-user-translate;
