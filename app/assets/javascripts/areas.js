@@ -9,6 +9,4 @@ $(document).ready(function() {
     });
     return false;
   });
-  $(document).on('click', '.area-map-zone', function(e) {
-  });
 });

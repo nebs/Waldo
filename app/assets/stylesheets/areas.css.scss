@@ -1,20 +1,18 @@
 @import 'foundation_and_overrides';
 
 .area-map-container {
-  width: 100%;
-  position: relative;
+  $map-container-box-shadow: 1px 1px 4px rgba(50, 50, 50, 0.75);
+  -webkit-box-shadow: $map-container-box-shadow;
+  -moz-box-shadow: $map-container-box-shadow;
+  box-shadow: $map-container-box-shadow;
   background-color: #ccc;
   margin-bottom: 1em;
-
-  -webkit-box-shadow: 1px 1px 4px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    1px 1px 4px rgba(50, 50, 50, 0.75);
-  box-shadow:         1px 1px 4px rgba(50, 50, 50, 0.75);
+  position: relative;
+  width: 100%;
 }
 
-.area-section {
-  header {
-    margin-bottom: .5em;
-  }
+.area-section header {
+  margin-bottom: .5em;
 }
 
 .zone-list {
@@ -22,50 +20,54 @@
 }
 
 .area-map {
-  position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
   color: #fff;
   font-size: .5em;
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
 
   .area-map-zone {
-    -webkit-transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out;
-    -moz-transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out;
-    -o-transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out;
-    transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+    $map-zone-transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+    -webkit-transition: $map-zone-transition;
+    -moz-transition: $map-zone-transition;
+    -o-transition: $map-zone-transition;
+    transition: $map-zone-transition;
 
-    -webkit-box-shadow: 1px 1px 4px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow:    1px 1px 4px rgba(50, 50, 50, 0.75);
-    box-shadow:         1px 1px 4px rgba(50, 50, 50, 0.75);
+    $map-zone-box-shadow: 1px 1px 4px rgba(50, 50, 50, 0.75);
+    -webkit-box-shadow: $map-zone-box-shadow;
+    -moz-box-shadow: $map-zone-box-shadow;
+    box-shadow: $map-zone-box-shadow;
 
-    position: absolute;
     background-color: #eee;
     cursor: pointer;
+    position: absolute;
 
     .area-map-zone-info {
-      -webkit-transition: background-color 0.15s ease-out, color 0.15s ease-out;
-      -moz-transition: background-color 0.15s ease-out, color 0.15s ease-out;
-      -o-transition: background-color 0.15s ease-out, color 0.15s ease-out;
-      transition: background-color 0.15s ease-out, color 0.15s ease-out;
+      $map-zone-info-transition: background-color 0.15s ease-out, color 0.15s ease-out;
+      -webkit-transition: $map-zone-info-transition;
+      -moz-transition: $map-zone-info-transition;
+      -o-transition: $map-zone-info-transition;
+      transition: $map-zone-info-transition;
 
       color: #333;
       background-color: none;
-      padding: 0;
-      font-size: .7em;
       font-family: 'courier new';
+      font-size: .7em;
+      padding: 0;
 
       @media (min-width: 640px) {
         color: #fff;
         background-color: #222;
-        padding: .3em;
         font-size: 1.2em;
+        padding: .3em;
       }
     }
 
     &:hover {
+      $map-zone-info-hover-box-shadow: 1px 1px 9px rgba(50, 50, 50, 1);
+      -webkit-box-shadow: $map-zone-info-hover-box-shadow;
+      -moz-box-shadow: $map-zone-info-hover-box-shadow;
+      box-shadow: $map-zone-info-hover-box-shadow;
       background-color: #fff;
-      -webkit-box-shadow: 1px 1px 9px rgba(50, 50, 50, 1);
-      -moz-box-shadow:    1px 1px 9px rgba(50, 50, 50, 1);
-      box-shadow:         1px 1px 9px rgba(50, 50, 50, 1);
       z-index: 10;
 
       .area-map-zone-info {
@@ -80,10 +82,11 @@
   }
 
   .area-map-user {
-    -webkit-transition: opacity 0.15s ease-out;
-    -moz-transition: opacity 0.15s ease-out;
-    -o-transition: opacity 0.15s ease-out;
-     transition: opacity 0.15s ease-out;
+    $map-user-transition: opacity 0.15s ease-out;
+    -webkit-transition: $map-user-transition;
+    -moz-transition: $map-user-transition;
+    -o-transition: $map-user-transition;
+     transition: $map-user-transition;
 
     $offset-user-translate: translate(-50%, -50%);
     -webkit-transform: $offset-user-translate;
@@ -92,9 +95,9 @@
     -o-transform: $offset-user-translate;
     transform: $offset-user-translate;
 
+    height: 3em;
     pointer-events: none;
     position: absolute;
-    height: 3em;
     width: 3em;
 
     .area-map-user-name {
