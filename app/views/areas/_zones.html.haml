@@ -3,7 +3,7 @@
     .area-map-zone-info
       = zone.name
     - zone.occupants.each do |user|
-      .area-map-user{ style: user_styles(user) }
+      .area-map-user{ class: ('me' if user == current_user), style: user_styles(user) }
         = user_photo(user)
         .area-map-user-name
           = short_user_name(user)

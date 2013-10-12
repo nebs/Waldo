@@ -100,6 +100,11 @@
     position: absolute;
     width: 3em;
 
+    &.me .area-map-user-name {
+      background-color: #cde889;
+      color: #333;
+    }
+
     .area-map-user-name {
       background-color: $primary-color;
       color: #fff;
