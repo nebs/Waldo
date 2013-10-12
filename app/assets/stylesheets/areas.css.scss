@@ -19,11 +19,28 @@
   margin-top: .5em;
 }
 
+.loading-overlay {
+  background-color: #fff;
+  display: none;
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  padding-top: 1em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
+
 .area-map {
   color: #fff;
   font-size: .5em;
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
+
+  &.loading .loading-overlay {
+    display: block;
+  }
 
   .area-map-zone {
     $map-zone-transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out;
@@ -78,6 +95,10 @@
       .area-map-user {
         opacity: .3;
       }
+    }
+
+    &:active {
+      background-color: #eee;
     }
   }
 

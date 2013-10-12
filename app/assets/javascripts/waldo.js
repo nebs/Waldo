@@ -1,0 +1,1 @@
+window.Waldo = new WaldoView();
