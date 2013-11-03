@@ -11,7 +11,7 @@
     - { name: 'Janitor Closet',   x: 0.71, y: 0,    w: 0.05, h: 0.17 }
     - { name: 'Goodall',          x: 0.76, y: 0,    w: 0.05, h: 0.17 }
     - { name: 'Huerta',           x: 0.81, y: 0,    w: 0.05, h: 0.17 }
-    - { name: 'Banks',            x: 0.86, y: 0,    w: 0.14, h: 0.17 }
+    - { name: 'Chavez',           x: 0.86, y: 0,    w: 0.14, h: 0.17 }
     - { name: 'Cigar',            x: 0,    y: 0.44, w: 0.06, h: 0.18 }
     - { name: 'Bar',              x: 0,    y: 0.62, w: 0.06, h: 0.25 }
     - { name: 'Lounge',           x: 0,    y: 0.87, w: 0.26, h: 0.13 }
@@ -25,15 +25,15 @@
     - { name: 'Mandela',          x: 0.37, y: 0.26, w: 0.07, h: 0.13 }
     - { name: 'Snack',            x: 0.37, y: 0.39, w: 0.09, h: 0.25 }
     - { name: 'Parks',            x: 0.37, y: 0.64, w: 0.07, h: 0.13 }
-    - { name: 'Cavell',           x: 0.48, y: 0.25, w: 0.07, h: 0.13 }
+    - { name: 'Adams',            x: 0.48, y: 0.25, w: 0.07, h: 0.13 }
     - { name: 'Kitchen',          x: 0.47, y: 0.38, w: 0.09, h: 0.27 }
-    - { name: 'Mother Teresa',    x: 0.48, y: 0.65, w: 0.07, h: 0.13 }
+    - { name: 'Wells',            x: 0.48, y: 0.65, w: 0.07, h: 0.13 }
     - { name: 'Server',           x: 0.56, y: 0.25, w: 0.07, h: 0.13 }
-    - { name: 'Dunant',           x: 0.64, y: 0.25, w: 0.07, h: 0.13 }
+    - { name: 'Friedman',         x: 0.64, y: 0.25, w: 0.07, h: 0.13 }
     - { name: 'MLK',              x: 0.56, y: 0.38, w: 0.15, h: 0.27 }
-    - { name: 'Keller',           x: 0.56, y: 0.65, w: 0.07, h: 0.13 }
-    - { name: 'Borlaug',          x: 0.92, y: 0.17, w: 0.08, h: 0.14 }
-    - { name: 'Bono',             x: 0.92, y: 0.31, w: 0.08, h: 0.14 }
+    - { name: 'Evers',            x: 0.56, y: 0.65, w: 0.07, h: 0.13 }
+    - { name: 'Dracula',          x: 0.92, y: 0.17, w: 0.08, h: 0.14 }
+    - { name: 'Ganz',             x: 0.92, y: 0.31, w: 0.08, h: 0.14 }
     - { name: 'Tubman',           x: 0.92, y: 0.45, w: 0.08, h: 0.14 }
     - { name: 'Skopistan',        x: 0.92, y: 0.59, w: 0.08, h: 0.41 }
     - { name: 'Work Area A',      x: 0.71, y: 0.17, w: 0.21, h: 0.64 }
